@@ -1,14 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
-import App from './App.jsx'
-import router from './router/router.jsx'
-import './index.css'
+// import routes for RouterProvider
+import router from './router/router'
+// import css animation library
+// import 'animate.css'
+import './reset.scss'
+import './main.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <App />
-    </RouterProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 )

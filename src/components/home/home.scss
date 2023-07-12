@@ -1,0 +1,39 @@
+$strong-color: #dc4405;
+$background-color: #f0f0f0;
+
+#home {
+  height: 100%;
+  width: 100%;
+  background-color: $background-color;
+}
+
+.headingContainer {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  strong {
+    font-weight: bold;
+    color: $strong-color;
+  }
+}
+
+.scrollContainer {
+  position: absolute;
+  text-align: center;
+  bottom: 10%;
+  right: 50%;
+  transform: translatex(50%);
+  opacity: 0;
+
+  svg {
+    width: 4rem;
+    height: auto;
+  }
+}
