@@ -1,0 +1,30 @@
+$background-color: #f0f0f0;
+$navbar: #404040;
+$button-hover: #808080;
+$light-text: #f0f0f0;
+$strong-color: #dc4405;
+
+#headingContainer {
+  display: flex;
+  background-color: $navbar;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  div {
+    background-color: $background-color;
+    color: $strong-color;
+    border-radius: .5rem;
+  }
+
+  li {
+    display: inline-block;
+  }
+}
+
+.navbarLinks {
+  display: inline-block;
+  text-decoration: none;
+  color: $light-text;
+  padding: 1.5rem 2rem;
+}

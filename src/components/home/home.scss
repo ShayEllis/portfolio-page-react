@@ -2,20 +2,24 @@ $strong-color: #dc4405;
 $background-color: #f0f0f0;
 
 #home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
   background-color: $background-color;
 }
 
 .headingContainer {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 75%;
   text-align: center;
 
   h1 {
     font-size: 4rem;
+
+    @media (max-width: 675px) {
+      font-size: 2rem;
+    }
   }
 
   strong {

@@ -10,9 +10,11 @@ const Sidebar = () => {
   // Main timeline for home page animations and animations in child components
   const timeline = useRef(null)
   // Strings that will be passed down to the AnimatedLetters components
-  const headingLineOne = 'Hi! My name is '
-  const headingStrongText = 'Shay Ellis'
-  const headingLineTwo = "I'm a JavaScript developer"
+  const headingText = [
+    'Hi! My name is ',
+    'Shay Ellis',
+    "I'm a JavaScript developer",
+  ]
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -50,13 +52,13 @@ const Sidebar = () => {
         <div className='headingContainer' ref={headingContainer}>
           <h1>
             <AnimatedLetters
-              string={headingLineOne}
+              string={headingText[0]}
               timelineRef={timeline}
               hover={true}
             />
             <strong>
               <AnimatedLetters
-                string={headingStrongText}
+                string={headingText[1]}
                 timelineRef={timeline}
                 hover={true}
               />
@@ -64,7 +66,7 @@ const Sidebar = () => {
           </h1>
           <h1>
             <AnimatedLetters
-              string={headingLineTwo}
+              string={headingText[2]}
               timelineRef={timeline}
               hover={true}
             />
