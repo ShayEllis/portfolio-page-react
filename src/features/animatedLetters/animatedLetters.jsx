@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import './animatedLetters.scss'
 import AnimatedLetter from '../animatedLetter/animatedLetter'
 
 const AnimatedLetters = ({ string, timelineRef, hover }) => {

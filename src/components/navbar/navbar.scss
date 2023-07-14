@@ -1,9 +1,3 @@
-$background-color: #f0f0f0;
-$navbar: #404040;
-$button-hover: #808080;
-$light-text: #f0f0f0;
-$strong-color: #dc4405;
-
 #headingContainer {
   position: relative;
   top: 0;
@@ -13,12 +7,13 @@ $strong-color: #dc4405;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  z-index: 9;
 
   div {
     font-family: 'Roboto Mono', monospace;
     background-color: $background-color;
     color: $strong-color;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
 
   li {
@@ -41,6 +36,6 @@ $strong-color: #dc4405;
   padding: 1.5rem;
 
   @media (max-width: 675px) {
-    padding: .8rem;
+    padding: 0.8rem;
   }
 }

@@ -1,5 +1,6 @@
 import { createHashRouter } from 'react-router-dom'
 import App from '../App'
+import PageTransiton from '../features/pageTransition/pageTransition'
 import Home from '../components/home/home'
 import About from '../components/about/about'
 import Contact from '../components/contact/contact'
@@ -11,15 +12,27 @@ const router = createHashRouter([
     children: [
       {
         path: '/',
-        element: <Home />,
+        element: (
+          <PageTransiton>
+            <Home />
+          </PageTransiton>
+        ),
       },
       {
         path: 'about',
-        element: <About />,
+        element: (
+          <PageTransiton>
+            <About />
+          </PageTransiton>
+        ),
       },
       {
         path: 'contact',
-        element: <Contact />,
+        element: (
+          <PageTransiton>
+            <Contact />
+          </PageTransiton>
+        ),
       },
     ],
   },

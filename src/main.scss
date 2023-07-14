@@ -4,6 +4,14 @@ $button-hover: #808080;
 $light-text: #f0f0f0;
 $strong-color: #dc4405;
 
+@import './reset.scss', './App.scss',
+  './features/pageTransition/pageTransition.scss',
+  './features/animatedLetters/animatedLetters.scss',
+  './features/animatedLetter/animatedLetter.scss',
+  './components/navbar/navbar.scss', './components/home/home.scss',
+  './components/contact/contact.scss', './components/about/about.scss',
+  './components/about/about.scss';
+
 * {
   box-sizing: border-box;
 }

@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import './animatedLetter.scss'
 
 const AnimatedLetter = ({ char, className }) => {
   const letterRef = useRef(null)
@@ -17,7 +16,10 @@ const AnimatedLetter = ({ char, className }) => {
   useEffect(() => {
     const context = gsap.context(() => {
       letterTween.current = gsap.to(letterRef.current, {
-        color: getComputedStyle(letterRef.current).color === 'rgb(220, 68, 5)' ? 'black' : '#dc4405',
+        color:
+          getComputedStyle(letterRef.current).color === 'rgb(220, 68, 5)'
+            ? 'black'
+            : '#dc4405',
         transform: 'scale(-1, 1)',
         repeat: 1,
         ease: 'back',

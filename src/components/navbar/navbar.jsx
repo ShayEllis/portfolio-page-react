@@ -1,5 +1,4 @@
 import { Link, NavLink } from 'react-router-dom'
-import './navbar.scss'
 import { gsap } from 'gsap'
 import { useRef, useLayoutEffect } from 'react'
 

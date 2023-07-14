@@ -1,4 +1,3 @@
-import './home.scss'
 import { gsap } from 'gsap'
 import { useEffect, useRef, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -33,11 +32,11 @@ const Home = () => {
       timeline.current
         .to(aboutLinkContainer.current, {
           duration: 1,
-          opacity: 1,
+          autoAlpha: 1,
         })
         .to(aboutLinkContainer.current, {
           duration: 0.5,
-          opacity: 1,
+          autoAlpha: 1,
           scale: 1.25,
           repeat: -1,
           yoyo: true,

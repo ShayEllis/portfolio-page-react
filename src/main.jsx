@@ -5,7 +5,6 @@ import { RouterProvider } from 'react-router-dom'
 import router from './router/router'
 // import css animation library
 // import 'animate.css'
-import './reset.scss'
 import './main.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
