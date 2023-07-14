@@ -1,7 +1,11 @@
 import './contact.scss'
 
 const Contact = () => {
-  return <h2>Contact Page</h2>
+  return (
+    <section id='about'>
+      <h2>Contact Page</h2>
+    </section>
+  )
 }
 
 export default Contact

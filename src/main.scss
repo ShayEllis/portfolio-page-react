@@ -11,6 +11,7 @@ $strong-color: #dc4405;
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  min-width: 3.4rem;
 }
 
 ::selection {
@@ -19,10 +20,65 @@ html {
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   background-color: $background-color;
   font-family: 'Roboto Slab', serif;
   font-size: 1.6rem;
   line-height: 1.25;
+
+  @keyframes intro-button {
+    50% {
+      transform: scale(1.25);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  a {
+    &:hover {
+      color: $background-color;
+      background-color: $button-hover;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      transition: 0.4s ease-in-out;
+    }
+
+    &::before {
+      border-top: 0 solid $strong-color;
+      border-right: 0 solid $strong-color;
+      bottom: 0;
+      left: 0;
+    }
+
+    &:hover::before {
+      border-top: 0.3rem solid $strong-color;
+      border-right: 0.3rem solid $strong-color;
+      width: calc(100% - 0.3rem);
+      height: calc(100% - 0.3rem);
+    }
+
+    &::after {
+      border-bottom: 0 solid $strong-color;
+      border-left: 0 solid $strong-color;
+      top: 0;
+      right: 0;
+    }
+
+    &:hover::after {
+      border-bottom: 0.3rem solid $strong-color;
+      border-left: 0.3rem solid $strong-color;
+      width: calc(100% - 0.3rem);
+      height: calc(100% - 0.3rem);
+    }
+  }
 }

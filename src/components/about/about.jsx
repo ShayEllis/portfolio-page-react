@@ -1,7 +1,11 @@
 import './about.scss'
 
 const About = () => {
-  return <h2>About Page</h2>
+  return (
+    <section id='about'>
+      <h2>About Page</h2>
+    </section>
+  )
 }
 
 export default About

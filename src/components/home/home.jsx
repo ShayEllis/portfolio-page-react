@@ -1,12 +1,12 @@
 import './home.scss'
-import { CgScrollV } from 'react-icons/cg'
 import { gsap } from 'gsap'
 import { useEffect, useRef, useLayoutEffect } from 'react'
+import { Link } from 'react-router-dom'
 import AnimatedLetters from '../../features/animatedLetters/animatedLetters'
 
-const Sidebar = () => {
+const Home = () => {
   const headingContainer = useRef(null)
-  const scrollContainer = useRef(null)
+  const aboutLinkContainer = useRef(null)
   // Main timeline for home page animations and animations in child components
   const timeline = useRef(null)
   // Strings that will be passed down to the AnimatedLetters components
@@ -31,14 +31,14 @@ const Sidebar = () => {
         ease: 'bounce',
       })
       timeline.current
-        .to(scrollContainer.current, {
+        .to(aboutLinkContainer.current, {
           duration: 1,
           opacity: 1,
         })
-        .to(scrollContainer.current, {
+        .to(aboutLinkContainer.current, {
           duration: 0.5,
           opacity: 1,
-          scale: 1.5,
+          scale: 1.25,
           repeat: -1,
           yoyo: true,
         })
@@ -72,12 +72,14 @@ const Sidebar = () => {
             />
           </h1>
         </div>
-        <div className='scrollContainer' ref={scrollContainer}>
-          <CgScrollV />
+        <div className='aboutLinkContainer' ref={aboutLinkContainer}>
+          <Link to='about' id='aboutLink'>
+            About me
+          </Link>
         </div>
       </section>
     </>
   )
 }
 
-export default Sidebar
+export default Home

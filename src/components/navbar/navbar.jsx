@@ -22,6 +22,11 @@ const Navbar = () => {
             opacity: 0,
             x: -window.innerWidth,
             ease: 'sine.out',
+            onComplete: () => {
+              gsap.set(element, {
+                clearProps: '',
+              })
+            },
           })
         })
       },

@@ -17,7 +17,7 @@ const AnimatedLetter = ({ char, className }) => {
   useEffect(() => {
     const context = gsap.context(() => {
       letterTween.current = gsap.to(letterRef.current, {
-        color: 'red',
+        color: getComputedStyle(letterRef.current).color === 'rgb(220, 68, 5)' ? 'black' : '#dc4405',
         transform: 'scale(-1, 1)',
         repeat: 1,
         ease: 'back',

@@ -5,6 +5,9 @@ $light-text: #f0f0f0;
 $strong-color: #dc4405;
 
 #headingContainer {
+  position: relative;
+  top: 0;
+  right: 0;
   display: flex;
   background-color: $navbar;
   justify-content: space-between;
@@ -12,6 +15,7 @@ $strong-color: #dc4405;
   width: 100%;
 
   div {
+    font-family: 'Roboto Mono', monospace;
     background-color: $background-color;
     color: $strong-color;
     border-radius: .5rem;
@@ -20,11 +24,23 @@ $strong-color: #dc4405;
   li {
     display: inline-block;
   }
+
+  @media (max-width: 675px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 334px) {
+    font-size: 1.2rem;
+  }
 }
 
 .navbarLinks {
   display: inline-block;
   text-decoration: none;
   color: $light-text;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem;
+
+  @media (max-width: 675px) {
+    padding: .8rem;
+  }
 }
