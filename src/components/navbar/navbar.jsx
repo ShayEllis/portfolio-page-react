@@ -16,9 +16,8 @@ const Navbar = () => {
         })
         navLinks.forEach((element) => {
           timeline.current.from(element, {
-            color: '#dc4405',
-            duration: 0.75,
-            opacity: 0,
+            duration: 0.5,
+            autoAlpha: 0,
             x: -window.innerWidth,
             ease: 'sine.out',
             onComplete: () => {
@@ -38,24 +37,40 @@ const Navbar = () => {
   return (
     <div ref={headingContainer} id='headingContainer'>
       <h2>
-        <Link to='/' className='navbarLinks'>
+        <NavLink
+          to='/'
+          className={({ isActive }) =>
+            isActive ? 'navbarLinks navbarIconActive' : 'navbarLinks'
+          }>
           <div>&#60;Shay Ellis&#47;&#62;</div>
-        </Link>
+        </NavLink>
       </h2>
       <nav>
         <ul>
           <li>
-            <NavLink to='/' className='navbarLinks'>
+            <NavLink
+              to='/'
+              className={({ isActive }) =>
+                isActive ? 'navbarLinks navbarLinksActive' : 'navbarLinks'
+              }>
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to='about' className='navbarLinks'>
+            <NavLink
+              to='about'
+              className={({ isActive }) =>
+                isActive ? 'navbarLinks navbarLinksActive' : 'navbarLinks'
+              }>
               About
             </NavLink>
           </li>
           <li>
-            <NavLink to='contact' className='navbarLinks'>
+            <NavLink
+              to='contact'
+              className={({ isActive }) =>
+                isActive ? 'navbarLinks navbarLinksActive' : 'navbarLinks'
+              }>
               Contact
             </NavLink>
           </li>

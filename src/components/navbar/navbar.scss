@@ -35,7 +35,22 @@
   color: $light-text;
   padding: 1.5rem;
 
+  &:hover {
+    color: $light-text;
+  }
+
   @media (max-width: 675px) {
     padding: 0.8rem;
   }
+}
+
+.navbarLinksActive {
+  color: $strong-color;
+  text-decoration: overline;
+  pointer-events: none;
+}
+
+.navbarIconActive {
+  color: $strong-color;
+  pointer-events: none;
 }
