@@ -1,0 +1,80 @@
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: $background-color;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $navbar;
+  color: $light-text;
+  margin: 4rem auto;
+  padding-top: 2rem;
+  width: 40rem;
+  box-shadow: 0 0 1em black;
+}
+
+.contact-form h2 {
+  color: $light-text;
+  padding: 0;
+}
+
+.input-container {
+  position: relative;
+  width: 75%;
+}
+
+.contact-form label{
+  display: inline-block;
+  margin-left: .2rem;
+  position: relative;
+  transition: .4s ease;
+  left: 0;
+  top: 2.8rem;
+}
+
+.input-container::before {
+  content: "";
+  position: absolute;
+  bottom: -.1rem;
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  transform: scaleX(0);
+  height: .3rem;
+  background-color: $strong-color;
+  transition: .4s ease;
+}
+
+.contact-form .active-input {
+  top: .3rem;
+  color: var(--strong-color);
+  transform: scale(.85);
+}
+
+.contact-form input {
+  color: var(--light-text);
+  background-color: transparent;
+  font-size: 1.6rem;
+  line-height: 2;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: .1rem solid $background-color;
+}
+
+.button {
+  position: relative;
+  width: 75%;
+  padding: .5rem 0;
+  margin: 4.5rem 0 3.5rem 0;
+  border: none;
+  background-color: $background-color;
+}

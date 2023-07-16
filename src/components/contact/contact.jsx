@@ -1,7 +1,9 @@
+import ContactForm from '../../features/contactForm/contactForm'
+
 const Contact = () => {
   return (
-    <section id='about'>
-      <h2>Contact Page</h2>
+    <section id='contact'>
+      <ContactForm />
     </section>
   )
 }

@@ -1,8 +1,33 @@
 #about {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
   background-color: $background-color;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.about-container p {
+  max-width: 25rem;
+}
+
+.my-picture {
+  border-radius: 45% 5% 45% 5%;
+  border: .4rem solid $strong-color;
+  width: 10rem;
+  height: auto;
+  transition: .5s ease;
+}
+
+.my-picture:hover {
+  filter: grayscale(100%);
 }

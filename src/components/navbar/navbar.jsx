@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { useRef, useLayoutEffect } from 'react'
 
@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <div ref={headingContainer} id='headingContainer'>
-      <h2>
+      <h3>
         <NavLink
           to='/'
           className={({ isActive }) =>
@@ -44,7 +44,7 @@ const Navbar = () => {
           }>
           <div>&#60;Shay Ellis&#47;&#62;</div>
         </NavLink>
-      </h2>
+      </h3>
       <nav>
         <ul>
           <li>
