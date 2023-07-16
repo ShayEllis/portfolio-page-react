@@ -1,55 +1,49 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { Form } from 'react-router-dom'
 
 const ContactForm = () => {
-  const spanRef = useRef()
-
-  const formElement = useRef()
-  const nameInput = useRef()
-  const emailInput = useRef()
-
-  useState(() => {
-    console.log(spanRef)
-    console.log('form', formElement.current)
-    console.log('name input', nameInput.current)
-    console.log('email input', emailInput.current)
-  })
-
-  // let moveLabel = (event) => {
-  //   event.target.labels[0].classList.add('active-input')
-  //   event.target.parentElement.style.setProperty('--before-scale', 'scaleX(1)')
-  // }
-
-  // let resetLabel = (event) => {
-  //   if (event.target.value.length === 0) {
-  //     event.target.parentElement.style.setProperty('--before-scale', '')
-  //     event.target.labels[0].classList.remove('active-input')
-  //   }
-  // }
-
-  // for (let el of inputContainers) {
-  //   el.lastElementChild.addEventListener('focus', moveLabel)
-  //   el.lastElementChild.addEventListener('blur', resetLabel)
-  // }
+  const [nameInputSelected, setNameInputSelected] = useState(false)
+  const [emailInputSelected, setEmailInputSelected] = useState(false)
 
   return (
-    <>
-      <span ref={spanRef}>hi</span>
-      <Form action='#' method='get' className='contact-form' ref={formElement}>
-        <h2>Contact</h2>
-        <div className='input-container' ref={nameInput}>
-          <label htmlFor='name'>Name</label>
-          <input type='text' name='name' id='name' placeholder=' ' required />
-        </div>
-        <div className='input-container' ref={emailInput}>
-          <label htmlFor='email'>Email</label>
-          <input type='text' name='email' id='email' placeholder=' ' required />
-        </div>
-        <button type='submit' className='button'>
-          Submit
-        </button>
-      </Form>
-    </>
+    <Form action='#' className='contact-form'>
+      <h2>Contact</h2>
+      <div
+        className='input-container'
+        onFocus={() => setNameInputSelected(true)}
+        onBlur={() => setNameInputSelected(false)}>
+        <label
+          htmlFor='name'
+          className={nameInputSelected ? 'active-input' : undefined}>
+          Name
+        </label>
+        <input type='text' name='name' id='name' required />
+        <div
+          className='inputColoredLine'
+          style={
+            nameInputSelected ? { transform: 'scaleX(1)' } : undefined
+          }></div>
+      </div>
+      <div
+        className='input-container'
+        onFocus={() => setEmailInputSelected(true)}
+        onBlur={() => setEmailInputSelected(false)}>
+        <label
+          htmlFor='email'
+          className={emailInputSelected ? 'active-input' : undefined}>
+          Email
+        </label>
+        <input type='email' name='email' id='email' required />
+        <div
+          className={'inputColoredLine'}
+          style={
+            emailInputSelected ? { transform: 'scaleX(1)' } : undefined
+          }></div>
+      </div>
+      <button type='submit' className='button'>
+        Submit
+      </button>
+    </Form>
   )
 }
 
