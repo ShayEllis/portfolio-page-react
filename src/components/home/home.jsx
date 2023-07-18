@@ -23,7 +23,6 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
-    console.log(headingContainer)
     const context = gsap.context(() => {
       timeline.current.to(headingContainer.current, {
         scale: 1.25,
