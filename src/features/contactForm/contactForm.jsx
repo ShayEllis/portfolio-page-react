@@ -1,10 +1,48 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Form } from 'react-router-dom'
 
 const ContactForm = () => {
   const [nameInputSelected, setNameInputSelected] = useState(false)
   const [emailInputSelected, setEmailInputSelected] = useState(false)
   const [textareaInputSelected, setTextareaInputSelected] = useState(false)
+
+  useEffect(() => {
+
+  }, [])
+
+  const sendEmail = async (event) => {
+
+    event.preventDefault()
+    const data = {
+      service_id: 'service_c3cmdx7',
+      template_id: 'template_0whkxbj',
+      user_id: 'DD77Vmqh7zERaDc9f',
+      template_params: {
+        from_name: event.target.name.value,
+        reply_to: event.target.email.value,
+        message: event.target.message.value,
+      },
+    }
+
+    try {
+      const response = await fetch(
+        'https://api.emailjs.com/api/v1.0/email/send',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        }
+      )
+      if (!response.ok) {
+        const textResponse = await response.text()
+        throw new Error(`Email could not be sent, response from server: ${textResponse}`)
+      }
+    } catch (error) {
+      console.error(error)
+    }
+  }
 
   const removeActiveStyle = ({ target }) => {
     if (target.value.length === 0) {
@@ -23,7 +61,7 @@ const ContactForm = () => {
   }
 
   return (
-    <Form action='#' className='contactForm'>
+    <form action='#' className='contactForm' onSubmit={sendEmail}>
       <h2>Contact</h2>
       <div
         className='inputContainer'
@@ -81,7 +119,7 @@ const ContactForm = () => {
       <button type='submit' className='button'>
         Submit
       </button>
-    </Form>
+    </form>
   )
 }
 
