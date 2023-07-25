@@ -60,6 +60,19 @@ h2 {
     }
   }
 
+  .spinner {
+    fill: $strong-color;
+    width: 5rem;
+    height: auto;
+    animation: spinner 1.5s linear infinite;
+
+    @keyframes spinner {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
   a {
     &:hover {
       color: $background-color;

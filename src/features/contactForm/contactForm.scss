@@ -6,6 +6,16 @@
   height: 100%;
   width: 100%;
   background-color: $background-color;
+
+  h3 {
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    text-align: center;
+  }
 }
 
 .contactForm {
@@ -18,18 +28,12 @@
   margin: 4rem auto;
   padding-top: 2rem;
   width: 40rem;
+  min-height: 35rem;
   box-shadow: 0 0 1em black;
 
   h2 {
     color: $light-text;
     padding: 0;
-  }
-
-  .activeInput {
-    top: 0.3rem;
-    left: -0.3rem;
-    color: $strong-color;
-    transform: scale(0.85);
   }
 }
 
@@ -57,44 +61,62 @@
     outline: none;
     border-bottom: 0.1rem solid $background-color;
   }
-}
 
-.inputColoredLine {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: -0.1rem;
-  width: 100%;
-  transform: scaleX(0);
-  height: 0.3rem;
-  background-color: $strong-color;
-  transition: 0.4s ease;
-}
+  .inputColoredLine {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -0.1rem;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.3rem;
+    background-color: $strong-color;
+    transition: 0.4s ease;
+  }
 
-.textareaColoredLine {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0.3rem;
-  width: 100%;
-  transform: scaleX(0);
-  height: 0.3rem;
-  background-color: $strong-color;
-  transition: 0.4s ease;
-}
+  .textareaColoredLine {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0.3rem;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.3rem;
+    background-color: $strong-color;
+    transition: 0.4s ease;
+  }
 
-textarea {
-  resize: vertical;
-  color: inherit;
-  font-size: inherit;
-  font-family: inherit;
-  width: 100%;
-  min-height: 10rem;
-  background-color: transparent;
-  margin-top: 0.8rem;
+  .activeInput {
+    top: 0.3rem;
+    left: -0.3rem;
+    color: $strong-color;
+    transform: scale(0.85);
+  }
 
-  &:focus-visible {
-    outline: none;
+  textarea {
+    resize: vertical;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    min-height: 10rem;
+    background-color: transparent;
+    margin-top: 0.8rem;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &:focus-within > label {
+    top: 0.3rem;
+    left: -0.3rem;
+    color: $strong-color;
+    transform: scale(0.85);
+  }
+
+  &:focus-within > div {
+    transform: scaleX(1);
   }
 }
 
