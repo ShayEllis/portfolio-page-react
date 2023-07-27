@@ -1,15 +1,8 @@
-import myPicture from '../../assets/my-picture.jpg'
 import linkedInIcon from '../../assets/linkedin-logo.png'
 import gitHubIcon from '../../assets/github-logo.png'
+import Carousel from '../../features/carousel/carousel'
 
 const About = () => {
-  const translateZ = Math.round(
-    42 /* cell size */ / 2 / Math.tan(Math.PI / 4 /* # cells */)
-  )
-  console.log(translateZ)
-  const angle = 1/*selectedIndex*/ / 4/*cellCount*/ * -360
-  console.log(angle)
-
   return (
     <section id='about'>
       <h2>About</h2>
@@ -30,14 +23,7 @@ const About = () => {
       </div>
       <section id='projects'>
         <h2>Projects</h2>
-        <div className='scene'>
-          <div className='projectsCarousel'>
-            <div className='projectCell'>1</div>
-            <div className='projectCell'>2</div>
-            <div className='projectCell'>3</div>
-            <div className='projectCell'>4</div>
-          </div>
-        </div>
+        <Carousel />
       </section>
     </section>
   )

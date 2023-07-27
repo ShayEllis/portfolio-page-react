@@ -1,0 +1,27 @@
+.scene {
+  aspect-ratio: 3 / 2;
+  width: 50%;
+  margin: 10rem auto;
+  position: relative;
+  perspective: 50rem;
+  perspective-origin: center -6rem;
+  border: 2px solid green;
+  transform: rotate(-10deg);
+
+  .projectsCarousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    border: 2px solid blue;
+  }
+
+  .projectCell {
+    position: absolute;
+    right: 2.5%;
+    top: 2.5%;
+    width: 95%;
+    height: 95%;
+    border: 2px solid $strong-color;
+  }
+}
