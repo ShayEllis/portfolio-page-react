@@ -1,6 +1,6 @@
 .scene {
   aspect-ratio: 3 / 2;
-  width: 50%;
+  width: 40%;
   margin: 10rem auto;
   position: relative;
   perspective: 50rem;
@@ -20,6 +20,17 @@
     top: 2.5%;
     width: 95%;
     height: 95%;
-    border: 2px solid $strong-color;
+    border-radius: 5%;
+
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-radius: 1rem;
+    }
+
+    img {
+      border-radius: 1rem;
+    }
   }
 }

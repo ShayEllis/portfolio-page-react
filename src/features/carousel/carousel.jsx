@@ -1,5 +1,10 @@
 import { useRef, useEffect, useLayoutEffect, useState } from 'react'
 import { gsap } from 'gsap'
+import jammingProjectIcon from '../../assets/projectScreenshots/jammingProjectScreenshot.jpeg'
+import redditProjectIcon from '../../assets/projectScreenshots/redditClientProjectScreenshot.jpeg'
+import adoptAPetProjectIcon from '../../assets/projectScreenshots/adoptAPetProject.jpeg'
+import articlesProjectIcon from '../../assets/projectScreenshots/articlesProject.jpeg'
+import flashCardsProjectIcon from '../../assets/projectScreenshots/flashCardsProject.jpeg'
 
 const Carousel = () => {
   const [windowWidth, setWindowWidth] = useState(null)
@@ -60,13 +65,41 @@ const Carousel = () => {
   return (
     <div className='scene' ref={scene}>
       <div className='projectsCarousel' ref={projectsCarousel}>
-        <div className='projectCell'>1</div>
-        <div className='projectCell'>2</div>
-        <div className='projectCell'>3</div>
-        <div className='projectCell'>4</div>
-        <div className='projectCell'>4</div>
-        <div className='projectCell'>4</div>
-        <div className='projectCell'>4</div>
+        <div className='projectCell'>
+          <a
+            href='https://sae-jammming-project-react.netlify.app'
+            target='_blank'>
+            <img src={jammingProjectIcon} alt='Jamming project home page screenshot' />
+          </a>
+        </div>
+        <div className='projectCell'>
+          <a
+            href='https://sae-reddit-client-project.netlify.app'
+            target='_blank'>
+            <img src={redditProjectIcon} alt='Reddit client project home page screenshot' />
+          </a>
+        </div>
+        <div className='projectCell'>
+          <a
+            href='https://github.com/ShayEllis/adopt-a-pet-starter-vite'
+            target='_blank'>
+            <img src={adoptAPetProjectIcon} alt='Adopt a pet project home page screenshot' />
+          </a>
+        </div>
+        <div className='projectCell'>
+          <a
+            href='https://github.com/ShayEllis/react-router-lesson-vite'
+            target='_blank'>
+            <img src={articlesProjectIcon} alt='Articles project home page screenshot' />
+          </a>
+        </div>
+        <div className='projectCell'>
+          <a
+            href='https://github.com/ShayEllis/flashcards-vite-react-redux'
+            target='_blank'>
+            <img src={flashCardsProjectIcon} alt='Flash cards project home page screenshot' />
+          </a>
+        </div>
       </div>
     </div>
   )

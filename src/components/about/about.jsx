@@ -12,11 +12,17 @@ const About = () => {
           am currently enrolled in a the Full-Stack Engineering course at
           codecademy.
         </p>
-        <div className='social-link-container'>
-          <a href='https://github.com/ShayEllis' target='_blank'>
+        <div>
+          <a
+            href='https://github.com/ShayEllis'
+            target='_blank'
+            className='socialLink'>
             <img src={gitHubIcon} />
           </a>
-          <a href='https://www.linkedin.com/in/shayellis815/' target='_blank'>
+          <a
+            href='https://www.linkedin.com/in/shayellis815/'
+            target='_blank'
+            className='socialLink'>
             <img src={linkedInIcon} />
           </a>
         </div>
