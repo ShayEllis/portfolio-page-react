@@ -1,7 +1,7 @@
 import { useRef, useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
-import linkedInIcon from '../../assets/linkedin-logo.png'
-import gitHubIcon from '../../assets/github-logo.png'
+import { Link } from 'react-router-dom'
+import Skills from '../Skills/skills'
 import Carousel from '../../features/carousel/carousel'
 import AnimatedLetter from '../../features/animatedLetter/animatedLetter'
 const About = () => {
@@ -23,24 +23,12 @@ const About = () => {
       </h2>
       <div className='aboutContainer'>
         <p>
-          My name is Shay Ellis. I am a web developer based in central Oregon. I
-          am currently enrolled in a the Full-Stack Engineering course at
-          codecademy.
+          I am a JavaScript based in central Oregon. I have completed training
+          from freeCodeCamp and I am currently enrolled in a the Full-Stack
+          Engineering course at Codecademy. During this training I have gained
+          experience working on small projects and have an appreciation for
+          writing clean and maintainable code.
         </p>
-        <div>
-          <a
-            href='https://github.com/ShayEllis'
-            target='_blank'
-            className='socialLink'>
-            <img src={gitHubIcon} />
-          </a>
-          <a
-            href='https://www.linkedin.com/in/shayellis815/'
-            target='_blank'
-            className='socialLink'>
-            <img src={linkedInIcon} />
-          </a>
-        </div>
       </div>
       <section id='projects'>
         <h2>
@@ -50,6 +38,21 @@ const About = () => {
         </h2>
         <Carousel />
       </section>
+      <section id='skills'>
+        <h2>
+          {'Skills'.split('').map((letter, idx) => {
+            return <AnimatedLetter key={idx} char={letter} className='letter' />
+          })}
+        </h2>
+        <Skills />
+      </section>
+      <footer>
+        <div className='contactLinkContainer'>
+          <Link to='/contact' id='contactLink'>
+            Contact
+          </Link>
+        </div>
+      </footer>
     </section>
   )
 }

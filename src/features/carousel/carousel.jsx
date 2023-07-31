@@ -83,7 +83,7 @@ const Carousel = () => {
     // Use rotateY to rotate the entire carousel
     const ctx = gsap.context(() => {
       gsap.to(projectsCarousel.current, {
-        rotationY: '+=360',
+        rotationY: '-=360',
         duration: 4 * projectsCarousel.current.children.length,
         ease: 'none',
         repeat: -1,

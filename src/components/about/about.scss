@@ -10,14 +10,6 @@
   img {
     max-width: 100%;
   }
-
-  .socialLink {
-    position: relative;
-    display: inline-block;
-    width: 5rem;
-    height: 5rem;
-    margin: 1rem;
-  }
 }
 
 .aboutContainer {
@@ -34,4 +26,13 @@
 
 #projects {
   width: 100%;
+}
+
+#contactLink {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: $strong-color;
+  background: $navbar;
+  padding: 1.5rem;
 }

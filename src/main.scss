@@ -10,7 +10,9 @@ $strong-color: #dc4405;
   './features/animatedLetter/animatedLetter.scss',
   './components/navbar/navbar.scss', './components/home/home.scss',
   './components/contact/contact.scss', './components/about/about.scss',
-  './components/about/about.scss', './features/contactForm/contactForm.scss', './features/carousel/carousel.scss';
+  './components/about/about.scss', './features/contactForm/contactForm.scss',
+  './features/carousel/carousel.scss', './components/Skills/skills.scss',
+  './components/errorPage/errorPage.scss';
 
 * {
   box-sizing: border-box;

@@ -4,11 +4,13 @@ import PageTransiton from '../features/pageTransition/pageTransition'
 import Home from '../components/home/home'
 import About from '../components/about/about'
 import Contact from '../components/contact/contact'
+import ErrorPage from '../components/errorPage/errorPage'
 
 const router = createHashRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',

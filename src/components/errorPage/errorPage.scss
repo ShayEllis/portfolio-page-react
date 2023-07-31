@@ -1,0 +1,24 @@
+#errorPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .errorIcon {
+    width: 20rem;
+    height: auto;
+    color: $strong-color;
+  }
+
+  a {
+    color: $strong-color;
+    padding: .3rem;
+    position: relative;
+  }
+
+  h3 {
+    padding: 2rem 0;
+  }
+}
