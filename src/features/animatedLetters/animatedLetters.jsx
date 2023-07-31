@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import AnimatedLetter from '../animatedLetter/animatedLetter'
 
@@ -8,7 +8,7 @@ const AnimatedLetters = ({ string, timelineRef, hover }) => {
   useEffect(() => {
     const context = gsap.context(
       (self) => {
-        const letters = self.selector('.letter')
+        const letters = self.selector('.animatedLetter')
         for (let l of letters) {
           timelineRef.current.from(l, {
             opacity: 0,
@@ -25,13 +25,14 @@ const AnimatedLetters = ({ string, timelineRef, hover }) => {
 
   return (
     <span ref={animatedLettersContainer} className='animatedLetters'>
-      {string.split('').map((i, idx) => {
-        if (i !== ' ') {
-          return <AnimatedLetter key={idx} char={i} className='letter' />
-        } else {
-          return ' '
-        }
-      })}
+      {hover
+        ? string.split('').map((letter, idx) => {
+            if (letter !== ' ') {
+              return <AnimatedLetter key={idx} char={letter} />
+            }
+            return ' '
+          })
+        : string}
     </span>
   )
 }

@@ -1,5 +1,6 @@
 import { useRef, useEffect, useLayoutEffect, useState } from 'react'
 import { gsap } from 'gsap'
+import { Tooltip } from '@mui/material'
 import jammingProjectIcon from '../../assets/projectScreenshots/jammingProjectScreenshot.jpeg'
 import redditProjectIcon from '../../assets/projectScreenshots/redditClientProjectScreenshot.jpeg'
 import adoptAPetProjectIcon from '../../assets/projectScreenshots/adoptAPetProject.jpeg'
@@ -10,6 +11,36 @@ const Carousel = () => {
   const [windowWidth, setWindowWidth] = useState(null)
   const scene = useRef()
   const projectsCarousel = useRef()
+  // Project information for carousel cells
+  const projectInformation = {
+    jamming: {
+      url: 'https://sae-jammming-project-react.netlify.app',
+      icon: jammingProjectIcon,
+      tooltip:
+        'A web app that creates Spotify playlists. Hosted on Netlify',
+    },
+    redditClient: {
+      url: 'https://sae-reddit-client-project.netlify.app',
+      icon: redditProjectIcon,
+      tooltip:
+        'A client that fetches reddit content. Hosted on Netlify',
+    },
+    adoptAPet: {
+      url: 'https://github.com/ShayEllis/adopt-a-pet-starter-vite',
+      icon: adoptAPetProjectIcon,
+      tooltip: 'A Codecademy project using React Router v6',
+    },
+    articles: {
+      url: 'https://github.com/ShayEllis/react-router-lesson-vite',
+      icon: articlesProjectIcon,
+      tooltip: 'A Codecademy project using React Router v6',
+    },
+    flashCards: {
+      url: 'https://github.com/ShayEllis/flashcards-vite-react-redux',
+      icon: flashCardsProjectIcon,
+      tooltip: 'A Codecademy project using Redux',
+    },
+  }
 
   const handleResize = ({ target }) => {
     setWindowWidth(target.innerWidth)
@@ -65,41 +96,26 @@ const Carousel = () => {
   return (
     <div className='scene' ref={scene}>
       <div className='projectsCarousel' ref={projectsCarousel}>
-        <div className='projectCell'>
-          <a
-            href='https://sae-jammming-project-react.netlify.app'
-            target='_blank'>
-            <img src={jammingProjectIcon} alt='Jamming project home page screenshot' />
-          </a>
-        </div>
-        <div className='projectCell'>
-          <a
-            href='https://sae-reddit-client-project.netlify.app'
-            target='_blank'>
-            <img src={redditProjectIcon} alt='Reddit client project home page screenshot' />
-          </a>
-        </div>
-        <div className='projectCell'>
-          <a
-            href='https://github.com/ShayEllis/adopt-a-pet-starter-vite'
-            target='_blank'>
-            <img src={adoptAPetProjectIcon} alt='Adopt a pet project home page screenshot' />
-          </a>
-        </div>
-        <div className='projectCell'>
-          <a
-            href='https://github.com/ShayEllis/react-router-lesson-vite'
-            target='_blank'>
-            <img src={articlesProjectIcon} alt='Articles project home page screenshot' />
-          </a>
-        </div>
-        <div className='projectCell'>
-          <a
-            href='https://github.com/ShayEllis/flashcards-vite-react-redux'
-            target='_blank'>
-            <img src={flashCardsProjectIcon} alt='Flash cards project home page screenshot' />
-          </a>
-        </div>
+        {Object.keys(projectInformation).map((project) => {
+          return (
+            <div className='projectCell' key={project}>
+              <Tooltip
+                title={
+                  <h3 style={{ fontSize: '1.2rem' }}>
+                    {projectInformation[project].tooltip}
+                  </h3>
+                }
+                followCursor>
+                <a href={projectInformation[project].url} target='_blank'>
+                  <img
+                    src={projectInformation[project].icon}
+                    alt={`${project} project home page screenshot`}
+                  />
+                </a>
+              </Tooltip>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
