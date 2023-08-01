@@ -23,7 +23,7 @@ const About = () => {
       </h2>
       <div className='aboutContainer'>
         <p>
-          I am a JavaScript based in central Oregon. I have completed training
+          I am a JavaScript based in Central Oregon. I have completed training
           from freeCodeCamp and I am currently enrolled in a the Full-Stack
           Engineering course at Codecademy. During this training I have gained
           experience working on small projects and have an appreciation for

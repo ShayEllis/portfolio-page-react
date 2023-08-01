@@ -52,10 +52,9 @@ const ContactForm = () => {
   }
 
   return (
-    <form action='#' className='contactForm' onSubmit={sendEmail}>
+    <form className='contactForm' onSubmit={sendEmail}>
       {state.formStatus.status === 'idle' && (
         <>
-          <h2>Contact</h2>
           <div className='inputContainer'>
             <label
               htmlFor='name'

@@ -13,7 +13,7 @@ const ErrorPage = () => {
       ) : (
         error.status
       )}
-      <h3>{error.statusText}</h3>
+      <h3>{error.statusText || 'An error occurred'}</h3>
       <h3>
         Return to the <Link to='/'>home page?</Link>{' '}
       </h3>

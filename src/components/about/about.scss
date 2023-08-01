@@ -11,6 +11,10 @@
   img {
     max-width: 100%;
   }
+
+  h2 {
+    margin-top: 3rem;
+  }
 }
 
 .aboutContainer {
@@ -37,4 +41,5 @@
   color: $strong-color;
   background: $navbar;
   padding: 1.5rem;
+  margin: 3rem;
 }

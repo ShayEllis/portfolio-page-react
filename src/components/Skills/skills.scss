@@ -1,4 +1,23 @@
-.skillIcon {
-  width: 5rem;
-  height: auto;
+.skillIconsConatiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .skillIcon {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1rem;
+
+    svg {
+      display: block;
+      width: 7.5rem;
+      height: auto;
+      transition: all 0.25s;
+
+      &:hover {
+        color: $strong-color;
+        transform: scale(1.2);
+      }
+    }
+  }
 }
