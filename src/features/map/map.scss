@@ -1,0 +1,12 @@
+#map {
+  float: left;
+  margin-right: 1rem;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 1rem;
+
+  @media screen and (max-width: 600px) {
+    float: none;
+    margin: 0 auto 1rem auto;
+  }
+}

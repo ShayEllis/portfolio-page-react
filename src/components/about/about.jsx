@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import Skills from '../Skills/skills'
 import Carousel from '../../features/carousel/carousel'
 import AnimatedLetter from '../../features/animatedLetter/animatedLetter'
+import Map from '../../features/map/map'
+
 const About = () => {
   const letterTimeline = useRef()
 
@@ -22,6 +24,7 @@ const About = () => {
         })}
       </h2>
       <div className='aboutContainer'>
+        <Map />
         <p>
           I am a JavaScript based in Central Oregon. I have completed training
           from freeCodeCamp and I am currently enrolled in a the Full-Stack
