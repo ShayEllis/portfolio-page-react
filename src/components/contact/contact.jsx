@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { Tooltip } from '@mui/material'
 import AnimatedLetter from '../../features/animatedLetter/animatedLetter'
 import ContactForm from '../../features/contactForm/contactForm'
 import linkedInIcon from '../../assets/linkedin-logo.png'
@@ -22,22 +23,29 @@ const Contact = () => {
           return <AnimatedLetter key={idx} char={letter} className='letter' />
         })}
       </h2>
-
       <ContactForm />
-      <footer>
+      <footer id='footer'>
         <div className='socialLinkContainer'>
-          <a
-            href='https://github.com/ShayEllis'
-            target='_blank'
-            className='socialLink'>
-            <img src={gitHubIcon} />
-          </a>
-          <a
-            href='https://www.linkedin.com/in/shayellis815/'
-            target='_blank'
-            className='socialLink'>
-            <img src={linkedInIcon} />
-          </a>
+          <Tooltip
+            title={<h3 style={{ fontSize: '1.2rem' }}>GitHub</h3>}
+            followCursor>
+            <a
+              href='https://github.com/ShayEllis'
+              target='_blank'
+              className='socialLink'>
+              <img src={gitHubIcon} />
+            </a>
+          </Tooltip>
+          <Tooltip
+            title={<h3 style={{ fontSize: '1.2rem' }}>LinkedIn</h3>}
+            followCursor>
+            <a
+              href='https://www.linkedin.com/in/shayellis815/'
+              target='_blank'
+              className='socialLink'>
+              <img src={linkedInIcon} />
+            </a>
+          </Tooltip>
         </div>
       </footer>
     </section>

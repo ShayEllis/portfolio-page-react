@@ -1,16 +1,35 @@
 #contact {
   width: 100%;
   min-height: 100%;
+  padding-bottom: 5rem;
 
-  .socialLink {
-    position: relative;
-    display: inline-block;
-    width: 5rem;
-    height: 5rem;
-    margin: 1rem;
+  @media (max-width: 675px) {
+    padding-bottom: 4rem;
   }
 
-  img {
-    max-width: 100%;
+  #footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: $navbar;
+
+    .socialLink {
+      position: relative;
+      display: inline-block;
+      width: 4rem;
+      height: 4rem;
+      margin: .5rem;
+
+      @media (max-width: 675px) {
+        width: 3rem;
+        height: 3rem;
+        margin: .5rem;
+      }
+    }
+  
+    img {
+      max-width: 100%;
+    }
   }
 }
