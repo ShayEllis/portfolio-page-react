@@ -26,7 +26,7 @@ const About = () => {
       <div className='aboutContainer'>
         <Map />
         <p>
-          I am a JavaScript developer based in Central Oregon. I have completed
+          I am a front end developer based in Central Oregon. I have completed
           training from freeCodeCamp and I am currently enrolled in the
           Full-Stack Engineering course at Codecademy. During this training I
           have gained experience working on small projects and have an
