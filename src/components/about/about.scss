@@ -24,10 +24,10 @@
   p {
     max-width: 75%;
     overflow: hidden;
+    margin: 0 auto;
 
     @media (max-width: 600px) {
       text-align: center;
-      margin: 0 auto;
     }
   }
 }
