@@ -12,7 +12,7 @@ const Home = () => {
   const headingText = [
     'Hi! My name is ',
     'Shay Ellis',
-    "I'm a font end developer",
+    "I'm a frontend developer",
   ]
 
   useLayoutEffect(() => {
