@@ -4,7 +4,7 @@ import { Tooltip } from '@mui/material'
 import jammingProjectIcon from '../../assets/projectScreenshots/jammingProjectScreenshot.jpeg'
 import redditProjectIcon from '../../assets/projectScreenshots/redditClientProjectScreenshot.jpeg'
 import adoptAPetProjectIcon from '../../assets/projectScreenshots/adoptAPetProject.jpeg'
-import articlesProjectIcon from '../../assets/projectScreenshots/articlesProject.jpeg'
+import calendarTracker from '../../assets/projectScreenshots/calendarTracker.png'
 import flashCardsProjectIcon from '../../assets/projectScreenshots/flashCardsProject.jpeg'
 
 const Carousel = () => {
@@ -16,24 +16,22 @@ const Carousel = () => {
     jamming: {
       url: 'https://sae-jammming-project-react.netlify.app',
       icon: jammingProjectIcon,
-      tooltip:
-        'A web app that creates Spotify playlists. Hosted on Netlify',
+      tooltip: 'A web app that creates Spotify playlists. Hosted on Netlify',
     },
     redditClient: {
       url: 'https://sae-reddit-client-project.netlify.app',
       icon: redditProjectIcon,
-      tooltip:
-        'A client that fetches reddit content. Hosted on Netlify',
+      tooltip: 'A client that fetches reddit content. Hosted on Netlify',
     },
     adoptAPet: {
       url: 'https://github.com/ShayEllis/adopt-a-pet-starter-vite',
       icon: adoptAPetProjectIcon,
       tooltip: 'A Codecademy project using React Router v6',
     },
-    articles: {
-      url: 'https://github.com/ShayEllis/react-router-lesson-vite',
-      icon: articlesProjectIcon,
-      tooltip: 'A Codecademy project using React Router v6',
+    calendarTracker: {
+      url: 'https://calendar-hard-tracker-ui.onrender.com',
+      icon: calendarTracker,
+      tooltip: 'A web calendar app that is used for tracking a workout program',
     },
     flashCards: {
       url: 'https://github.com/ShayEllis/flashcards-vite-react-redux',
